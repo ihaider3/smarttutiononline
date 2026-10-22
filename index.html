@@ -54,7 +54,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./styles.css?v=2.0">
 
   <!-- JSON-LD Structured Data Schema (EducationalOrganization & FAQPage) -->
   <script type="application/ld+json">
@@ -219,13 +219,17 @@
             From Struggling to <span class="gradient-text">Succeeding</span>
           </h1>
 
-          <!-- Dynamic Typewriter line (Optimized, fits perfectly on mobile and desktop) -->
+          <!-- Dynamic Typewriter line (Horizontal on desktop, stacked directly below on mobile) -->
           <div class="hero-typewriter-container">
             <div class="hero-typewriter-box">
-              <span class="typewriter-badge-dot"></span>
-              <span class="typewriter-static">Online Tutoring for</span>
-              <span class="gradient-text typewriter-dynamic" id="typewriter-text"></span>
-              <span class="typewriter-cursor"></span>
+              <div class="typewriter-top-row">
+                <span class="typewriter-badge-dot"></span>
+                <span class="typewriter-static">Online Tutoring for</span>
+              </div>
+              <div class="typewriter-text-row">
+                <span class="gradient-text typewriter-dynamic" id="typewriter-text"></span>
+                <span class="typewriter-cursor"></span>
+              </div>
             </div>
           </div>
 
@@ -2064,6 +2068,6 @@
   </div>
 
   <!-- JavaScript -->
-  <script src="./script.js"></script>
+  <script src="./script.js?v=2.0"></script>
 </body>
 </html>

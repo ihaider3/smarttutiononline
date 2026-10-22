@@ -30,9 +30,9 @@ function initTypewriter() {
 
   const phrases = [
     'Maths, English & Science',
-    'Secondary Students',
-    'Sixth Form Students',
-    'Primary (KS1 & KS2)'
+    'GCSE & A-Level Students',
+    'Primary (KS1 & KS2 SATs)',
+    'Grade 8/9 & A* Exam Prep'
   ];
 
   let phraseIndex = 0;

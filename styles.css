@@ -595,6 +595,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
+.typewriter-top-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-shrink: 0;
+}
+
+.typewriter-text-row {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
 .typewriter-badge-dot {
   width: 9px;
   height: 9px;
@@ -3756,53 +3769,82 @@ h1, h2, h3, h4, h5, h6 {
     word-break: normal;
   }
 
-  /* Mobile Typewriter Badge: perfectly sized, never overflows */
+  /* Mobile Typewriter Badge: 2-Line Stacked (Line 1: Online Tutoring for | Line 2: Dynamic Typing Text) */
   .hero-typewriter-container {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-bottom: 1.35rem;
-    padding: 0 0.5rem;
-    box-sizing: border-box;
+    display: flex !important;
+    justify-content: center !important;
+    width: 100% !important;
+    margin-bottom: 1.35rem !important;
+    padding: 0 0.5rem !important;
+    box-sizing: border-box !important;
   }
 
   .hero-typewriter-box {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 0.35rem 0.5rem;
-    padding: 0.45rem 0.95rem;
-    border-radius: 9999px;
-    font-size: clamp(0.74rem, 3.2vw, 0.88rem);
-    max-width: 100%;
-    text-align: center;
-    box-sizing: border-box;
-    box-shadow: 0 4px 16px -2px rgba(255, 107, 0, 0.12);
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.35rem !important;
+    padding: 0.75rem 1.25rem !important;
+    border-radius: 20px !important;
+    width: 100% !important;
+    max-width: 380px !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+    background: linear-gradient(135deg, rgba(255, 107, 0, 0.09) 0%, rgba(2, 132, 199, 0.09) 100%) !important;
+    border: 1.5px solid rgba(255, 107, 0, 0.28) !important;
+    box-shadow: 0 6px 20px -2px rgba(255, 107, 0, 0.12) !important;
+  }
+
+  /* Line 1 (Upar): Online Tutoring for */
+  .typewriter-top-row {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.45rem !important;
+    font-size: 0.82rem !important;
+    font-weight: 700 !important;
+    color: var(--navy) !important;
+    letter-spacing: 0.04em !important;
+    text-transform: uppercase !important;
+    flex-shrink: 0 !important;
+  }
+
+  .typewriter-top-row .typewriter-static {
+    font-size: 0.82rem !important;
+    letter-spacing: 0.04em !important;
   }
 
   .typewriter-badge-dot {
-    width: 7px;
-    height: 7px;
-    flex-shrink: 0;
+    width: 7px !important;
+    height: 7px !important;
+    flex-shrink: 0 !important;
   }
 
-  .typewriter-static {
-    font-size: inherit;
-    font-weight: 700;
-    white-space: nowrap;
-    flex-shrink: 0;
+  /* Line 2 (Directly Underneath): Typing Text */
+  .typewriter-text-row {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    width: 100% !important;
+    min-height: 1.6em !important;
   }
 
   .typewriter-dynamic {
-    font-size: inherit;
-    font-weight: 800;
-    white-space: nowrap;
+    font-size: clamp(0.92rem, 3.8vw, 1.05rem) !important;
+    font-weight: 800 !important;
+    text-align: center !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+    line-height: 1.35 !important;
   }
 
   .typewriter-cursor {
-    height: 1.1em;
-    width: 2px;
+    height: 1.15em !important;
+    width: 2.5px !important;
+    margin-left: 3px !important;
   }
 
   .hero-description {
@@ -4008,9 +4050,9 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .hero-typewriter-box {
-    padding: 0.42rem 0.85rem;
-    gap: 0.35rem;
-    font-size: clamp(0.72rem, 3.1vw, 0.84rem);
+    padding: 0.7rem 1.1rem !important;
+    gap: 0.3rem !important;
+    max-width: 360px !important;
   }
 
   .stats-section-wrap {
