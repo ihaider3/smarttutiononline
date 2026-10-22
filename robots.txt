@@ -1,0 +1,6 @@
+# robots.txt for Smart Tuition Online
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://smarttuition.online/sitemap.xml

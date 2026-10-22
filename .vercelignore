@@ -1,0 +1,13 @@
+# Vercel Ignore File
+.git
+.gitignore
+.vercel
+node_modules
+*.log
+.DS_Store
+Thumbs.db
+
+# Offline backup files (index.html is the primary production entry point)
+Smart Tuition - Personalised Online Tutoring for Exceptional Results_files
+Smart Tuition - Personalised Online Tutoring for Exceptional Results_original_download.html
+Smart Tuition - Personalised Online Tutoring for Exceptional Results.html
