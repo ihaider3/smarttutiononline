@@ -29,10 +29,10 @@ function initTypewriter() {
   if (!targetElement) return;
 
   const phrases = [
-    'Primary (Ages 5–11 • KS1 & KS2 SATs)',
-    'Secondary (Ages 11–16 • GCSE Excellence)',
-    'Sixth Form (Ages 16–18 • A-Level Prep)',
-    'Maths, English & Science (Grade 8/9 & A*)'
+    'Maths, English & Science',
+    'Secondary Students',
+    'Sixth Form Students',
+    'Primary (KS1 & KS2)'
   ];
 
   let phraseIndex = 0;
