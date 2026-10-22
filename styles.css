@@ -74,6 +74,8 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
+  overflow-x: hidden;
+  width: 100%;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -85,6 +87,7 @@ body {
   background-color: var(--bg-body);
   line-height: 1.65;
   overflow-x: hidden;
+  width: 100%;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -589,6 +592,19 @@ h1, h2, h3, h4, h5, h6 {
   flex-wrap: nowrap;
   line-height: 1.4;
   max-width: 100%;
+}
+
+.typewriter-prefix {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.typewriter-content {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
 }
 
 .typewriter-badge-dot {
@@ -3727,6 +3743,161 @@ h1, h2, h3, h4, h5, h6 {
    MOBILE CAROUSEL RULES FOR FEATURES / WHY US (<= 768px)
    ========================================================================== */
 @media (max-width: 768px) {
+  /* Mobile Hero Layout & Typewriter 2-Line Responsive Stack */
+  .hero-section {
+    padding-top: 1.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .hero-badge-wrap {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+  }
+
+  .hero-title {
+    font-size: clamp(2rem, 8vw, 2.75rem);
+    line-height: 1.15;
+    margin-bottom: 1.1rem;
+    word-break: normal;
+  }
+
+  /* 2-Line Stacked Typewriter Badge on Mobile (Line 1: Online Tutoring for | Line 2: Typing Phrase) */
+  .hero-typewriter-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 1.35rem;
+    padding: 0 0.25rem;
+    box-sizing: border-box;
+  }
+
+  .hero-typewriter-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem;
+    padding: 0.75rem 1.15rem;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 375px;
+    margin: 0 auto;
+    white-space: normal;
+    text-align: center;
+    box-sizing: border-box;
+    box-shadow: 0 4px 18px -2px rgba(255, 107, 0, 0.12);
+  }
+
+  .typewriter-prefix {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--navy);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .typewriter-content {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    min-height: 1.55em;
+  }
+
+  .typewriter-dynamic {
+    font-size: clamp(0.92rem, 3.8vw, 1.05rem);
+    font-weight: 800;
+    text-align: center;
+    white-space: normal;
+    word-break: break-word;
+    line-height: 1.35;
+  }
+
+  .typewriter-cursor {
+    height: 1.1em;
+    width: 2.5px;
+    margin-left: 3px;
+  }
+
+  .hero-description {
+    font-size: clamp(0.95rem, 3.5vw, 1.05rem);
+    line-height: 1.65;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1.75rem;
+    word-break: normal;
+    box-sizing: border-box;
+    padding: 0 0.25rem;
+  }
+
+  .hero-cta-group {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.75rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .hero-cta-group .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-trust-bar {
+    width: 100%;
+    max-width: 375px;
+    padding: 0.65rem 0.85rem;
+    gap: 0.65rem;
+    border-radius: 18px;
+    box-sizing: border-box;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .trust-avatar-group {
+    flex-shrink: 0;
+  }
+
+  .trust-avatar {
+    width: 30px;
+    height: 30px;
+    font-size: 0.68rem;
+    margin-left: -6px;
+  }
+
+  .trust-stars-row {
+    font-size: 0.82rem;
+    gap: 0.35rem;
+    flex-wrap: wrap;
+  }
+
+  .trust-stars {
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+  }
+
+  .trust-badge-pill {
+    font-size: 0.65rem;
+    padding: 0.12rem 0.45rem;
+  }
+
+  .trust-sub {
+    font-size: 0.72rem;
+    line-height: 1.3;
+  }
+
   .features-mobile-controls {
     display: flex;
     align-items: center;
@@ -3842,12 +4013,23 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 580px) {
   .site-header {
-    height: 72px;
+    height: 68px;
   }
 
   .brand-logo {
-    height: 54px;
-    max-width: 200px;
+    height: 48px;
+    width: auto;
+    max-width: 170px;
+  }
+
+  .nav-actions {
+    gap: 0.5rem;
+  }
+
+  .nav-actions .btn-sm {
+    padding: 0.45rem 0.75rem;
+    font-size: 0.8rem;
+    white-space: nowrap;
   }
 
   .stats-section-wrap {
